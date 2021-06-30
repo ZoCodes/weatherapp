@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="src/style.css" rel="stylesheet" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card border-info">
+        <div class="card-body">
+          <p class="update">updated 3 minutes ago</p>
+          <div class="row">
+            <form class="col-8">
+              <input type="text" placeholder="Enter a City" />
+            </form>
+            <h1 class="col">15°C</h1>
+          </div>
+
+          <h2>Leeds, UK</h2>
+
+          <div class="row">
+            <h3 class="col-10">Wednesday, 23rd June 2021</h3>
+            <div class="col main-weather-img">
+              <img src="media/cloud.png" width="90" />
+            </div>
+          </div>
+
+          <p class="main-weather-description">Partly cloudy</p>
+          <p class="next-days">Next 5 Days</p>
+
+          <hr />
+          <div class="row five-days">
+            <div class="col day-weather">
+              <img src="media/cloud.png" width="60" />
+              <br />
+              Thursday <br />
+              17°C
+            </div>
+            <div class="col day-weather">
+              <img src="media/thunder.png" width="60" />
+              <br />
+              Friday <br />
+              9°C
+            </div>
+            <div class="col day-weather">
+              <img src="media/cloud.png" width="60" />
+              <br />
+              Saturday <br />
+              17°C
+            </div>
+            <div class="col day-weather">
+              <img src="media/sun.png" width="60" />
+              <br />
+              Sunday <br />
+              21°C
+            </div>
+            <div class="col day-weather">
+              <img src="media/sun.png" width="60" />
+              <br />
+              Monday <br />
+              22°C
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

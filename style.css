@@ -1,0 +1,53 @@
+body {
+  color: #54b3a9;
+}
+
+input {
+  font-size: 19px;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+hr {
+  color: #54b3a9;
+  padding: 2px;
+  opacity: 80%;
+}
+p.update {
+  color: #626a7c;
+  font-size: 10px;
+}
+
+p.main-weather-description {
+  color: #626a7c;
+  text-align: right;
+}
+
+p.next-days {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.card {
+  margin-top: 20px;
+  border: solid, #54b3a9;
+}
+
+.day-weather {
+  color: #626a7c;
+}
+.five-days {
+  text-align: center;
+  font-size: 19px;
+}
