@@ -4,11 +4,14 @@ body {
 
 input {
   font-size: 19px;
+  border: 2px solid;
   border-radius: 20px;
+  border-color: #54b3a9;
+  padding-left: 10px;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
 }
 
 h2 {
@@ -24,6 +27,23 @@ hr {
   padding: 2px;
   opacity: 80%;
 }
+
+a {
+  color: #626a7c;
+}
+
+.celsius {
+  color: #54b3a9;
+  text-decoration: none;
+}
+.break {
+  font-size: 30px;
+}
+.fahrenheit {
+  font-size: 30px;
+  color: #626a7c;
+  text-decoration: none;
+}
 p.update {
   color: #626a7c;
   font-size: 10px;
@@ -36,12 +56,18 @@ p.main-weather-description {
 
 p.next-days {
   text-align: center;
-  margin-top: 70px;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: larger;
 }
 
 .card {
   margin-top: 20px;
   border: solid, #54b3a9;
+}
+
+.main-weather-img {
+  width: 100%;
 }
 
 .day-weather {
@@ -50,4 +76,17 @@ p.next-days {
 .five-days {
   text-align: center;
   font-size: 19px;
+}
+
+.celsius:hover {
+  color: #626a7c;
+  text-decoration: underline;
+}
+
+.fahrenheit:hover {
+  color: #54b3a9;
+  text-decoration: underline;
+}
+::placeholder {
+  color: #54b3a9;
 }
