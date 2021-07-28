@@ -10,42 +10,44 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link href="src/style.css" rel="stylesheet" />
-    <title>Weather App</title>
+    <title>ZoCodes Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="card border-info border-3">
         <div class="card-body">
           <p class="update">updated 3 minutes ago</p>
-          <div class="row">
-            <form class="col-8" id="city-form">
-              <input
-                type="text"
-                placeholder="Enter a City"
-                autofocus="on"
-                autocomplete="off"
-                id="enter-city-input"
+
+          <form id="city-form">
+            <input
+              type="text"
+              placeholder="Enter a City"
+              autocomplete="off"
+              id="enter-city-input"
+            />
+
+            <input type="submit" value="Search" class="search-button" />
+          </form>
+
+          <h1 id="main-city">Leeds, UK</h1>
+
+          <h2>Wednesday, 23rd June 2021 | 14:37</h2>
+          <button class="current-location">Current Location</button>
+
+          <ul>
+            <li class="main-temperature" id="temperature">15°C</li>
+            <li>
+              <img
+                src="media/showers.png"
+                class="main-weather-img"
+                alt="weather image"
               />
-            </form>
-            <h1 class="col">
-              <span id="temperature"> 15</span
-              ><a href="#" class="celsius" id="celsius-link">°C</a>
-              <span class="break">|</span
-              ><a href="#" class="fahrenheit" id="fahrenheit-link">°F</a>
-            </h1>
-          </div>
-
-          <h2 id="main-city">Leeds, UK</h2>
-
-          <div class="row">
-            <h3 class="col-10">Wednesday, 23rd June 2021 | 14:37</h3>
-            <div class="col">
-              <img src="media/cloud.png" class="main-weather-img" />
-            </div>
-          </div>
-
-          <p class="main-weather-description">Partly cloudy</p>
+            </li>
+            <li class="main-weather-description">Scattered showers</li>
+          </ul>
           <p class="next-days">Next 5 Days</p>
 
           <hr />
