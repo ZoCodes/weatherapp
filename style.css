@@ -5,21 +5,26 @@ body {
 input {
   font-size: 19px;
   border: 2px solid;
-  border-radius: 20px;
+  border-radius: 5px;
   border-color: #54b3a9;
   padding-left: 10px;
+  cursor: pointer;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 30px;
+  margin: 10px auto;
+  text-transform: capitalize;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 50px;
+  margin: 30px auto;
+  text-align: right;
 }
 
 hr {
@@ -28,8 +33,41 @@ hr {
   opacity: 80%;
 }
 
-a {
-  color: #626a7c;
+ul {
+  list-style: none;
+  text-align: right;
+}
+
+.search-button {
+  font-size: 14px;
+  color: white;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #54b3a9;
+  background-color: #54b3a9;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #626a7c;
+  border: none;
+}
+
+.current-location {
+  font-size: 16px;
+  color: white;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #54b3a9;
+  background-color: #54b3a9;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.current-location:hover {
+  background-color: #626a7c;
+  border: none;
 }
 
 .celsius {
@@ -39,19 +77,21 @@ a {
 .break {
   font-size: 30px;
 }
-.fahrenheit {
-  font-size: 30px;
-  color: #626a7c;
-  text-decoration: none;
-}
+
 p.update {
   color: #626a7c;
   font-size: 10px;
 }
 
-p.main-weather-description {
+li.main-temperature {
+  font-size: 30px;
+  font-weight: 500;
+  padding-right: 40px;
+}
+li.main-weather-description {
   color: #626a7c;
   text-align: right;
+  padding-top: 10px;
 }
 
 p.next-days {
@@ -67,7 +107,7 @@ p.next-days {
 }
 
 .main-weather-img {
-  width: 100%;
+  width: 15%;
 }
 
 .day-weather {

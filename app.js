@@ -41,7 +41,7 @@ function formatDate(date) {
     currentMinutes = `0${currentMinutes}`;
   }
 
-  let currentDate = document.querySelector("h3");
+  let currentDate = document.querySelector("h2");
   currentDate.innerHTML = `${currentWeekDay}, ${currentMonth} ${currentDay} ${currentYear} | ${currentHour}:${currentMinutes}`;
 
   return currentDate;
@@ -56,6 +56,7 @@ function enterCity(event) {
 
   let mainCity = document.querySelector("#main-city");
   let searchInput = document.querySelector("#enter-city-input");
+  mainCity.trim;
 
   if (searchInput.value) {
     mainCity.innerHTML = `${searchInput.value}`;
@@ -67,28 +68,19 @@ function enterCity(event) {
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", enterCity);
 
-// Celsius to Fahrenheit Function
+//API information
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitElement = document.querySelector("#temperature");
-  let fahrenheit = fahrenheitElement.innerHTML;
-  fahrenheitElement.innerHTML = Math.round((fahrenheit * 9) / 5 + 32);
+let apiKey = "e744bfafcb3c1411c3f393198d753e28";
+let units = "metric";
+let city = "Paris";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+
+//API functions and calls
+function showTemperature(response) {
+  let temperature = Math.round(response.data.main.temp);
+
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = `${temperature}°C`;
 }
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-//Fahrenheit back to Celsius Function
-
-function convertToCelsius(event) {
-  event.preventDefault;
-  let celsiusElement = document.querySelector("#temperature");
-  let celsius = celsiusElement.innerHTML;
-  celsiusElement.innerHTML = Math.round(((celsius - 32) * 5) / 9);
-}
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
-//Note - linsk have a bug as allow you to keep clicking and the temperature goes up and also should only be allowed to click on C after F
+axios.get(`${apiUrl}`).then(showTemperature);
