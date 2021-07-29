@@ -70,7 +70,7 @@ form.addEventListener("submit", enterCity);
 
 //API information
 
-let apiKey = "e744bfafcb3c1411c3f393198d753e28";
+let apiKey = //secret 
 let units = "metric";
 let city = "Paris";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
