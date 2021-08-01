@@ -23,22 +23,31 @@
 
           <form id="city-form">
             <input
-              type="text"
+              type="search"
               placeholder="Enter a City"
               autocomplete="off"
               id="enter-city-input"
+              class="city-input"
             />
 
-            <input type="submit" value="Search" class="search-button" />
+            <input
+              type="submit"
+              value="Search"
+              class="search-button"
+              id="search-button"
+            />
           </form>
 
-          <h1 id="main-city">Leeds, UK</h1>
+          <!-- H1 gets filled in on search -->
+          <h1 id="searched-city"></h1>
 
           <h2>Wednesday, 23rd June 2021 | 14:37</h2>
-          <button class="current-location">Current Location</button>
+          <button class="current-location" id="current-button">
+            Current Location
+          </button>
 
           <ul>
-            <li class="main-temperature" id="temperature">15°C</li>
+            <li class="main-temperature"><span id="temperature">15</span>°C</li>
             <li>
               <img
                 src="media/showers.png"
@@ -46,7 +55,13 @@
                 alt="weather image"
               />
             </li>
-            <li class="main-weather-description">Scattered showers</li>
+            <li class="main-weather-description" id="weather-description">
+              rain rain go away
+            </li>
+            <li class="humidity-stat">
+              Humidity: <span id="humidity"></span>%
+            </li>
+            <li class="wind-stat">Wind: <span id="wind"></span> km/h</li>
           </ul>
           <p class="next-days">Next 5 Days</p>
 
