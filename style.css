@@ -94,6 +94,18 @@ li.main-weather-description {
   padding-top: 10px;
 }
 
+li.humidity-stat {
+  color: #626a7c;
+  text-align: right;
+  padding-top: 10px;
+}
+
+li.wind-stat {
+  color: #626a7c;
+  text-align: right;
+  padding-top: 10px;
+}
+
 p.next-days {
   text-align: center;
   margin-top: 30px;
@@ -118,15 +130,6 @@ p.next-days {
   font-size: 19px;
 }
 
-.celsius:hover {
-  color: #626a7c;
-  text-decoration: underline;
-}
-
-.fahrenheit:hover {
-  color: #54b3a9;
-  text-decoration: underline;
-}
 ::placeholder {
   color: #54b3a9;
 }
