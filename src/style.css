@@ -38,6 +38,10 @@ ul {
   text-align: right;
 }
 
+a{
+  color: #54b3a9;
+}
+
 .search-button {
   font-size: 14px;
   color: white;
@@ -128,6 +132,12 @@ p.next-days {
 .five-days {
   text-align: center;
   font-size: 19px;
+}
+
+p.build-info {
+  text-align: center;
+  padding-top: 10px;
+  color: #626a7c;
 }
 
 ::placeholder {
