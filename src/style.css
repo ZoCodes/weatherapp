@@ -71,7 +71,8 @@ a{
 
 .current-location:hover {
   background-color: #626a7c;
-  border: none;
+  border: 2px solid;
+  border-radius: 5px;
 }
 
 .celsius {
@@ -94,20 +95,20 @@ li.main-temperature {
 }
 li.main-weather-description {
   color: #626a7c;
-  text-align: right;
+  text-align: left;
   padding-top: 10px;
 }
 
 li.humidity-stat {
   color: #626a7c;
-  text-align: right;
-  padding-top: 10px;
+  text-align: left;
+  padding-top: 5px;
 }
 
 li.wind-stat {
   color: #626a7c;
-  text-align: right;
-  padding-top: 10px;
+  text-align: left;
+  padding-top: 5px;
 }
 
 p.next-days {
@@ -123,7 +124,7 @@ p.next-days {
 }
 
 .main-weather-img {
-  width: 15%;
+  width: 50%;
 }
 
 .day-weather {

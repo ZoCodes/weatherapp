@@ -15,13 +15,16 @@
     <link href="src/style.css" rel="stylesheet" />
     <title>ZoCodes Weather App</title>
   </head>
+
+
   <body>
     <div class="container">
       <div class="card border-info border-3">
         <div class="card-body">
           <p class="update">updated 3 minutes ago</p>
 
-          <form id="city-form">
+        <form id="city-form">
+      
             <input
               type="search"
               placeholder="Enter a City"
@@ -29,14 +32,14 @@
               id="enter-city-input"
               class="city-input"
             />
-
+       
             <input
               type="submit"
               value="Search"
               class="search-button"
               id="search-button"
             />
-          </form>
+        </form>
 
           <!-- H1 gets filled in on search -->
           <h1 id="searched-city"></h1>
@@ -45,54 +48,70 @@
           <button class="current-location" id="current-button">
             Current Location
           </button>
+      </div>
 
-          <ul>
-            <li class="main-temperature"><span id="temperature">15</span>°C</li>
-            <li>
-              <img
-                src="media/showers.png"
-                class="main-weather-img"
-                alt="weather image"
-              />
-            </li>
+        <ul>
+        <div class="row no-gutters">
+
+          <!-- Grey weather descriptions -->
+          <div class="col-9">
             <li class="main-weather-description" id="weather-description">
               rain rain go away
             </li>
             <li class="humidity-stat">
               Humidity: <span id="humidity"></span>%
             </li>
-            <li class="wind-stat">Wind: <span id="wind"></span> km/h</li>
-          </ul>
-          <p class="next-days">Next 5 Days</p>
+            <li class="wind-stat">Wind: <span id="wind"></span> km/h
+            </li>
+          </div>
+
+            <!-- Main weather and image -->
+          <div class="col-md">
+            <li class="main-temperature"><span id="temperature">15</span>°C</li>
+            <li>
+              <img
+                src="media/showers.png"
+                class="main-weather-img image-fluid"
+                alt="weather image"
+              />
+            </li>
+          </div>
+
+          <div class="col"></div>
+
+        </div>
+        </ul>
+
+        <p class="next-days">Next 5 Days</p>
 
           <hr />
           <div class="row five-days">
             <div class="col day-weather">
-              <img src="media/cloud.png" width="60" />
+              <img src="media/cloud.png" width="60" class="image-fluid" />
               <br />
               Thursday <br />
               17°C
             </div>
             <div class="col day-weather">
-              <img src="media/thunder.png" width="60" />
+              <img src="media/thunder.png" width="60" class="image-fluid" />
               <br />
               Friday <br />
               9°C
             </div>
             <div class="col day-weather">
-              <img src="media/cloud.png" width="60" />
+              <img src="media/cloud.png" width="60" class="image-fluid" />
               <br />
               Saturday <br />
               17°C
             </div>
             <div class="col day-weather">
-              <img src="media/sun.png" width="60" />
+              <img src="media/sun.png" width="60" class="image-fluid" />
               <br />
               Sunday <br />
               21°C
             </div>
             <div class="col day-weather">
-              <img src="media/sun.png" width="60" />
+              <img src="media/sun.png" width="60" class="image-fluid"/>
               <br />
               Monday <br />
               22°C
