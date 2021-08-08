@@ -49,9 +49,22 @@ function formatDate(date) {
 
 formatDate(theDate);
 
-//API information
 
-//Open Weather App Functions
+//Open Weather API App Functions
+
+//Handle searched city
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#enter-city-input").value;
+  searchCity(city);
+}
+
+function searchCity(city) {
+  let apiKey = "e744bfafcb3c1411c3f393198d753e28";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showWeather);
+}
 
 //Update weather display
 function showWeather(response) {
@@ -65,20 +78,6 @@ function showWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-}
-
-function searchCity(city) {
-  let apiKey = "e744bfafcb3c1411c3f393198d753e28";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(showWeather);
-}
-
-//Handle searched city
-function handleSubmit(event) {
-  event.preventDefault();
-  let city = document.querySelector("#enter-city-input").value;
-  searchCity(city);
 }
 
 //Current location
