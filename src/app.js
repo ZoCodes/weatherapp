@@ -79,9 +79,10 @@ function showWeather(response) {
     response.data.wind.speed
   );
 
-  document.querySelector("#main-icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+  let mainIcon = response.data.weather[0].icon
+  
+  document.querySelector("#main-icon").setAttribute("src", `media/${mainIcon}.png`)
   document.querySelector("#main-icon").setAttribute("alt", `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`)
-
 
 }
 
