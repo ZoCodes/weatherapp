@@ -55,7 +55,8 @@ a{
 
 .search-button:hover {
   background-color: #626a7c;
-  border: none;
+  border: 2px solid;
+  border-radius: 5px;
 }
 
 .current-location {
