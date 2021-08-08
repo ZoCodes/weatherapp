@@ -80,9 +80,8 @@ function showWeather(response) {
   );
 
   let mainIcon = response.data.weather[0].icon
-  
   document.querySelector("#main-icon").setAttribute("src", `media/${mainIcon}.png`)
-  document.querySelector("#main-icon").setAttribute("alt", `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`)
+  document.querySelector("#main-icon").setAttribute("alt", `${response.data.weather[0].description}`)
 
 }
 

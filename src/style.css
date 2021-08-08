@@ -76,12 +76,15 @@ a{
   border-radius: 5px;
 }
 
-.celsius {
-  color: #54b3a9;
-  text-decoration: none;
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -20px;
 }
-.break {
-  font-size: 30px;
+.unit-break {
+  position: relative;
+  font-size: 16px;
+  top: -20px;
 }
 
 p.update {
@@ -92,8 +95,16 @@ p.update {
 li.main-temperature {
   font-size: 30px;
   font-weight: 500;
-  padding-right: 40px;
+
 }
+
+.main-weather-img {
+  width: 60%;
+  padding-top: 0;
+ 
+}
+ 
+
 li.main-weather-description {
   color: #626a7c;
   text-align: left;
@@ -124,9 +135,6 @@ p.next-days {
   border: solid, #54b3a9;
 }
 
-.main-weather-img {
-  width: 60%;
-}
 
 .day-weather {
   color: #626a7c;
