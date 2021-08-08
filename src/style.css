@@ -42,6 +42,12 @@ a{
   color: #54b3a9;
 }
 
+a:hover {
+  color: #626a7c;
+  text-decoration: none;
+
+}
+
 .search-button {
   font-size: 14px;
   color: white;
@@ -76,17 +82,6 @@ a{
   border-radius: 5px;
 }
 
-.units {
-  position: relative;
-  font-size: 16px;
-  top: -20px;
-}
-.unit-break {
-  position: relative;
-  font-size: 16px;
-  top: -20px;
-}
-
 p.update {
   color: #626a7c;
   font-size: 10px;
@@ -95,13 +90,29 @@ p.update {
 li.main-temperature {
   font-size: 30px;
   font-weight: 500;
-
 }
+
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -15px;
+}
+.unit-break {
+  position: relative;
+  font-size: 20px;
+  top: -15px;
+}
+
+ .active {
+  color: #626a7c;
+  cursor: default;
+  text-decoration: none;
+}
+ 
 
 .main-weather-img {
   width: 60%;
-  padding-top: 0;
- 
+
 }
  
 

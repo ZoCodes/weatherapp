@@ -85,7 +85,6 @@ function showWeather(response) {
 
 }
 
-
 //Current location
 function currentLocation(position) {
   let latitude = position.coords.latitude;
@@ -102,11 +101,22 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
 
+//Unit conversion
+function displayCelsius(event){
+event.preventDefault
+
+}
+
+let celsiusTemperature = null;
+
 //Event listeners
 let searchForm = document.querySelector("#city-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsius);
 
 searchCity("Leeds");
