@@ -21,25 +21,29 @@
     <div class="container">
       <div class="card border-info border-3">
         <div class="card-body">
-          <p class="update">updated 3 minutes ago</p>
 
         <form id="city-form">
-      
+        <div class="row">
+          <div class="col-9">
             <input
               type="search"
               placeholder="Enter a City"
               autocomplete="off"
               id="enter-city-input"
-              class="city-input"
+              class="city-input form-control"
             />
-       
+          </div>
+
+           <div class="col-3">
             <input
               type="submit"
               value="Search"
-              class="search-button"
+              class="search-button btn btn-primary"
               id="search-button"
             />
+            </div>
         </form>
+        </div>
 
           <!-- H1 gets filled in on search -->
           <h1 id="searched-city"></h1>
