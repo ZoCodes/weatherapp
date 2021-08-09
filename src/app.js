@@ -107,16 +107,17 @@ function getCurrentLocation(event) {
 //Unit conversion
 function displayFahrenheit(event) {
 event.preventDefault
+celsiusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
 let fahrenheitTemp = (celsiusTemperature * 9/5) + 32;
 document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemp); 
 }
 
 function displayCelsius(event){
 event.preventDefault
+celsiusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
 document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature); 
-
-
-
 }
 
 
