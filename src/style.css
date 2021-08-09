@@ -41,6 +41,15 @@ a:hover {
 
 }
 
+.weather-app-wrapper{
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.border-info {
+  border-color: #54b3a9;
+}
+
 .form-control {
 border: 2px solid;
 border-radius: 5px;
