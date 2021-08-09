@@ -68,10 +68,13 @@ function searchCity(city) {
 
 //Update weather display
 function showWeather(response) {
+celsiusTemperature = Math.round(response.data.main.temp);
+
   document.querySelector("#searched-city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML = celsiusTemperature;
+
+
+
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -102,10 +105,20 @@ function getCurrentLocation(event) {
 }
 
 //Unit conversion
+function displayFahrenheit(event) {
+event.preventDefault
+let fahrenheitTemp = (celsiusTemperature * 9/5) + 32;
+document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemp); 
+}
+
 function displayCelsius(event){
 event.preventDefault
+document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature); 
+
+
 
 }
+
 
 let celsiusTemperature = null;
 
@@ -115,6 +128,9 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
