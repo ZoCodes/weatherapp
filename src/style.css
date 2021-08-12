@@ -121,18 +121,21 @@ li.main-weather-description {
   color: #626a7c;
   text-align: left;
   padding-top: 10px;
+  font-weight: lighter;
 }
 
 li.humidity-stat {
   color: #626a7c;
   text-align: left;
   padding-top: 5px;
+  font-weight: lighter;
 }
 
 li.wind-stat {
   color: #626a7c;
   text-align: left;
   padding-top: 5px;
+  font-weight: lighter;
 }
 
 p.next-days {
@@ -147,14 +150,11 @@ p.next-days {
   border: solid, #54b3a9;
 }
 
-
-.day-weather {
-  
-}
 .weather-forecast {
   text-align: center;
   font-size: 19px;
   color: #626a7c;
+  font-weight: lighter;
 }
 
 p.build-info {
