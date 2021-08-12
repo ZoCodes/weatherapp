@@ -43,6 +43,7 @@ a:hover {
 
 .weather-app-wrapper{
   max-width: 700px;
+
   margin: 20px auto;
 }
 
@@ -148,11 +149,12 @@ p.next-days {
 
 
 .day-weather {
-  color: #626a7c;
+  
 }
-.five-days {
+.weather-forecast {
   text-align: center;
   font-size: 19px;
+  color: #626a7c;
 }
 
 p.build-info {
