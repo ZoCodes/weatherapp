@@ -152,9 +152,14 @@ p.next-days {
 
 .weather-forecast {
   text-align: center;
-  font-size: 19px;
+  font-size: 18px;
   color: #626a7c;
   font-weight: lighter;
+}
+
+.forecast-temperature {
+  opacity: 0.7;
+  font-size: 16px;
 }
 
 p.build-info {
