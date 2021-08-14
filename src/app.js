@@ -69,10 +69,9 @@ function searchCity(city) {
 //Update weather display
 
 function getForecast(coordinates) {
-    console.log(coordinates);
   let apiKey = "e744bfafcb3c1411c3f393198d753e28";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
- axios.get(apiUrl).then(showWeather);
+ axios.get(apiUrl).then(showWeatherForecast);
 }
 
 function showWeather(response) {
@@ -80,8 +79,6 @@ celsiusTemperature = Math.round(response.data.main.temp);
 
   document.querySelector("#searched-city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = celsiusTemperature;
-
-
 
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
@@ -116,7 +113,6 @@ forecastHTML = forecastHTML + `</div>`;
 weatherForecastElement.innerHTML = forecastHTML;
 }
 
-
 //Current location
 function currentLocation(position) {
   let latitude = position.coords.latitude;
@@ -149,7 +145,6 @@ fahrenheitLink.classList.remove("active");
 document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature); 
 }
 
-
 let celsiusTemperature = null;
 
 //Event listeners
@@ -166,4 +161,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 searchCity("Leeds");
-showWeatherForecast();
