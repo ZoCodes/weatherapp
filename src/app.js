@@ -94,7 +94,7 @@ celsiusTemperature = Math.round(response.data.main.temp);
   getForecast(response.data.coord);
 }
 
-function showWeatherForecast() {
+function showWeatherForecast(response) {
 weatherForecastElement = document.querySelector("#weather-forecast");
 
 let weekDays = ["Thursday", "Friday", "Saturday", "Sunday","Monday"];
