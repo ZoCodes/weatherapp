@@ -98,7 +98,7 @@ weekDays.forEach(function(day) {
   forecastHTML = forecastHTML + `<div class="col">
               <img src="media/01d.png" width="60" class="image-fluid" />
               <br />
-              Thursday <br />
+              ${day} <br />
               <span class="forecast-temperature">17°C</span>
             </div>`;
 });
