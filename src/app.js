@@ -88,6 +88,26 @@ celsiusTemperature = Math.round(response.data.main.temp);
 
 }
 
+function showWeatherForecast() {
+weatherForecastElement = document.querySelector("#weather-forecast");
+
+let weekDays = ["Thursday", "Friday", "Saturday", "Sunday","Monday"];
+
+let forecastHTML = `<div class="row">`;
+weekDays.forEach(function(day) {
+  forecastHTML = forecastHTML + `<div class="col">
+              <img src="media/01d.png" width="60" class="image-fluid" />
+              <br />
+              Thursday <br />
+              <span class="forecast-temperature">17°C</span>
+            </div>`;
+});
+
+forecastHTML = forecastHTML + `</div>`;
+weatherForecastElement.innerHTML = forecastHTML;
+}
+
+
 //Current location
 function currentLocation(position) {
   let latitude = position.coords.latitude;
@@ -137,3 +157,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 searchCity("Leeds");
+showWeatherForecast();
