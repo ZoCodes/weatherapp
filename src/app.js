@@ -95,12 +95,11 @@ celsiusTemperature = Math.round(response.data.main.temp);
 }
 
 function showWeatherForecast(response) {
+let forecast = response.data.daily;
 weatherForecastElement = document.querySelector("#weather-forecast");
 
-let weekDays = ["Thursday", "Friday", "Saturday", "Sunday","Monday"];
-
 let forecastHTML = `<div class="row">`;
-weekDays.forEach(function(day) {
+forecast.forEach(function(day) {
   forecastHTML = forecastHTML + `<div class="col">
               <img src="media/01d.png" width="60" class="image-fluid" />
               <br />
