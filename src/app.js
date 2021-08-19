@@ -126,7 +126,7 @@ function showWeatherForecast(response) {
         `<div class="col">
               <img src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
-              }@2x.png" width="60" class="image-fluid" id="forecast-icon />
+              }@2x.png" width="60" class="image-fluid" id="forecast-icon" />
               <span class="forecast-temperature">${Math.round(
                 forecastDay.temp.day
               )}°C</span>
