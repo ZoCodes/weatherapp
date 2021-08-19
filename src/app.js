@@ -99,17 +99,20 @@ let forecast = response.data.daily;
 weatherForecastElement = document.querySelector("#weather-forecast");
 
 let forecastHTML = `<div class="row">`;
-forecast.forEach(function(day) {
+forecast.forEach(function(forecastDay) {
   forecastHTML = forecastHTML + `<div class="col">
-              <img src="media/01d.png" width="60" class="image-fluid" />
+              <img src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png" width="60" class="image-fluid" id="forecast-icon />
               <br />
-              ${day} <br />
-              <span class="forecast-temperature">17°C</span>
+              ${forecastDay.dt} <br />
+              <span class="forecast-temperature">${Math.round(forecastDay.temp.day)}°C</span>
             </div>`;
 });
 
 forecastHTML = forecastHTML + `</div>`;
 weatherForecastElement.innerHTML = forecastHTML;
+
 }
 
 //Current location
