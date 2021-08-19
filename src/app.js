@@ -49,6 +49,22 @@ function formatDate(date) {
 
 formatDate(theDate);
 
+//Timestamp function for forecast
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
 
 //Open Weather API App Functions
 
@@ -71,11 +87,11 @@ function searchCity(city) {
 function getForecast(coordinates) {
   let apiKey = "e744bfafcb3c1411c3f393198d753e28";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
- axios.get(apiUrl).then(showWeatherForecast);
+  axios.get(apiUrl).then(showWeatherForecast);
 }
 
 function showWeather(response) {
-celsiusTemperature = Math.round(response.data.main.temp);
+  celsiusTemperature = Math.round(response.data.main.temp);
 
   document.querySelector("#searched-city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = celsiusTemperature;
@@ -87,32 +103,40 @@ celsiusTemperature = Math.round(response.data.main.temp);
     response.data.wind.speed
   );
 
-  let mainIcon = response.data.weather[0].icon
-  document.querySelector("#main-icon").setAttribute("src", `media/${mainIcon}.png`)
-  document.querySelector("#main-icon").setAttribute("alt", `${response.data.weather[0].description}`)
+  let mainIcon = response.data.weather[0].icon;
+  document
+    .querySelector("#main-icon")
+    .setAttribute("src", `media/${mainIcon}.png`);
+  document
+    .querySelector("#main-icon")
+    .setAttribute("alt", `${response.data.weather[0].description}`);
 
   getForecast(response.data.coord);
 }
 
 function showWeatherForecast(response) {
-let forecast = response.data.daily;
-weatherForecastElement = document.querySelector("#weather-forecast");
+  let forecast = response.data.daily;
+  weatherForecastElement = document.querySelector("#weather-forecast");
 
-let forecastHTML = `<div class="row">`;
-forecast.forEach(function(forecastDay) {
-  forecastHTML = forecastHTML + `<div class="col">
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5)
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
               <img src="http://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png" width="60" class="image-fluid" id="forecast-icon />
+                forecastDay.weather[0].icon
+              }@2x.png" width="60" class="image-fluid" id="forecast-icon />
               <br />
               ${forecastDay.dt} <br />
-              <span class="forecast-temperature">${Math.round(forecastDay.temp.day)}°C</span>
+              <span class="forecast-temperature">${Math.round(
+                forecastDay.temp.day
+              )}°C</span>
             </div>`;
-});
+  });
 
-forecastHTML = forecastHTML + `</div>`;
-weatherForecastElement.innerHTML = forecastHTML;
-
+  forecastHTML = forecastHTML + `</div>`;
+  weatherForecastElement.innerHTML = forecastHTML;
 }
 
 //Current location
@@ -133,18 +157,19 @@ function getCurrentLocation(event) {
 
 //Unit conversion
 function displayFahrenheit(event) {
-event.preventDefault
-celsiusLink.classList.remove("active");
-fahrenheitLink.classList.add("active");
-let fahrenheitTemp = (celsiusTemperature * 9/5) + 32;
-document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemp); 
+  event.preventDefault;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemp);
 }
 
-function displayCelsius(event){
-event.preventDefault
-celsiusLink.classList.add("active");
-fahrenheitLink.classList.remove("active");
-document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature); 
+function displayCelsius(event) {
+  event.preventDefault;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
 }
 
 let celsiusTemperature = null;
