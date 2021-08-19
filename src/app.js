@@ -120,22 +120,25 @@ function showWeatherForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5)
+    if (index < 6)
       forecastHTML =
         forecastHTML +
-        `<div class="col">
-              <img src="http://openweathermap.org/img/wn/${
+        `<div class="col-2">
+        ${formatDay(forecastDay.dt)} 
+              <img src="media/${
                 forecastDay.weather[0].icon
-              }@2x.png" width="60" class="image-fluid" id="forecast-icon />
+              }.png" width="60" class="image-fluid" id="forecast-icon />
               <span class="forecast-temperature">${Math.round(
                 forecastDay.temp.day
               )}°C</span>
-              ${formatDay(forecastDay.dt)} 
+              
             </div>`;
   });
 
   forecastHTML = forecastHTML + `</div>`;
   weatherForecastElement.innerHTML = forecastHTML;
+
+  //let forecastIcon = forecastDay.weather[0].icon; document.querySelector("#forecast-icon").setAttribute("src", `media/${forecastIcon}.png`);
 }
 
 //Current location

@@ -2,7 +2,6 @@ body {
   color: #54b3a9;
 }
 
-
 h1 {
   font-size: 30px;
   margin: 10px auto;
@@ -23,6 +22,7 @@ hr {
   color: #54b3a9;
   padding: 2px;
   opacity: 80%;
+  margin-top: 0px;
 }
 
 ul {
@@ -30,7 +30,7 @@ ul {
   text-align: right;
 }
 
-a{
+a {
   color: #54b3a9;
   text-decoration: none;
 }
@@ -38,10 +38,9 @@ a{
 a:hover {
   color: #626a7c;
   text-decoration: none;
-
 }
 
-.weather-app-wrapper{
+.weather-app-wrapper {
   max-width: 700px;
 
   margin: 20px auto;
@@ -52,10 +51,10 @@ a:hover {
 }
 
 .form-control {
-border: 2px solid;
-border-radius: 5px;
-border-color: #54b3a9;
-cursor: pointer;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #54b3a9;
+  cursor: pointer;
 }
 
 .search-button {
@@ -106,16 +105,15 @@ li.main-temperature {
   top: -15px;
 }
 
- .active {
+.active {
   color: #626a7c;
   cursor: default;
   text-decoration: none;
 }
- 
+
 .main-weather-img {
   width: 60%;
 }
- 
 
 li.main-weather-description {
   color: #626a7c;
@@ -138,7 +136,7 @@ li.wind-stat {
   font-weight: lighter;
 }
 
-p.next-days {
+p.forecast {
   text-align: center;
   margin-top: 30px;
   font-weight: 400;
